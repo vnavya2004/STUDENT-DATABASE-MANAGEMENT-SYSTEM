@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOSTEL</title>   
+     <link rel="stylesheet" href="home_page.css"> 
+    <style>  
+    body{
+      background-image:linear-gradient(#DBE2EF,#3F72AF,#112D4E) ;     }
+   
+    .btn {
+        background-color: dodgerblue;
+        color: white;
+        padding: 15px 20px;
+        border:black;
+        cursor: pointer;
+        width: 10%;
+        opacity: 0.9; 
+        text-decoration: none;
+      }
+      
+      .btn:hover {
+        opacity: 1;
+      }</style> 
+    <style>.column {
+        float: left;
+        width: 20%;
+        padding: 10px;
+      }
+      
+      /* Style the images inside the grid */
+      .column img {
+        opacity: 0.8; 
+        cursor: pointer; 
+      }
+      
+      .column img:hover {
+        opacity: 1;
+      }
+      
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      
+      /* The expanding image container */
+      
+      /* Expanding image text */
+      #imgtext {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        color: white;
+        font-size: 20px;
+      }
+      
+      /* Closable button inside the expanded image */
+      .closebtn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: white;
+        font-size: 35px;
+        cursor: pointer;
+      } 
+          * {
+            box-sizing: border-box;
+          }
+          
+          .column {
+            float: left;
+            width: 100%;
+            padding: 5px;
+          }
+          
+          /* Clearfix (clear floats) */
+          .row::after {
+            content: "";
+            clear: both;
+            display: table;
+          } 
+          
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  margin:50px 60px;
+  width: 80%;
+  background-color: white;  
+  border-color: black;
+  text-align: center;
+  
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 10px 16px;
+} 
+
+
+.container {
+  padding: 10px 16px;
+  margin: 0px 75px;
+} 
+
+.box{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease 0s;
+}
+.box:hover{ box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+.box:before{
+    content: "";
+    /* background-image:linear-gradient(#DBE2EF,#3F72AF,#112D4E); */
+    background-color: #112D4E;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    transition: all 0.5s ease 0s;
+}
+.box:hover:before{ bottom: 0; }
+.box img{
+    width: 100%;
+    height: auto;
+    transition: all 0.5s ease 0s;
+}
+.box:hover img{ opacity: 0.3; }
+.box .box-content{
+    color: #fff;
+    /* background-image:linear-gradient(#DBE2EF,#3F72AF,#112D4E); */
+    background-color: #112D4E;
+    width: 100%;
+    padding: 13px 20px 12px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    transition: all 0.5s ease 0s;
+}  
+.box:hover .box-content{
+    color: #112D4E;
+    background: #fff;
+}
+.box .title{
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0;
+}
+.box .post{
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: lowercase;
+}
+.box .icon{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    opacity: 0;
+    transform: translateX(-50%) translateY(-35%);
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+}
+.box:hover .icon{ opacity: 1; }
+.box .icon {
+    margin: 0 3px;
+    display: inline-block;
+}
+.box .icon li a{
+    color: pink;
+    background: #fff;
+    font-size: 18px;
+    line-height: 35px;
+    height: 35px;
+    width: 35px;
+    display: block;
+    transition: all .5s ease 0s;
+}
+.box .icon li a:hover{
+    color: #fff;
+    /* background: ; */
+    border-radius: 10px 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+
+@media only screen and (max-width:990px){
+    .box{ margin: 0 0 30px; }
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+          </style>
+      </style>
+</head>
+<body> 
+
+  <nav class="navbar fixed-top "
+  style="background-color:#112D4E;color: white; height:55px;text-align: center;font-size: 32px;padding: 0px 0px 0px 110px;">
+  <div class="container-fluid">
+    HOSTEL FACILITIES
+  </div>
+</nav>
+
+    <!-- <h1 style="text-align: center;">HOSTEL FACILITIES</h1> -->
+    <p style="font-size:25px;text-align: center;">IIT Indore is a residential Institute that mandates students of all teaching programs to stay in the Hostels. This is a home away from home where students develop lifelong relationships, camaraderie, and wonderful experiences that give them a different kind of grooming. Many of our alumni inform us that it is in these hostels where they learned life skills that are taking them a long way. At the moment, IIT Indore has six hostels, out of which one is reserved for female residents and other for married students. All hostels are located close to each other, lie amidst the flora and fauna of the campus and have adjacent playgrounds which are always buzzing with physical activity. These are also close to the Academic Pods, which houses all research and undergraduate labs, the backbone of this Institute.</p>
+  
+    <h2 >Facilities in all these hostels are as follows:</h2> 
+
+<ul style="font-size:20px ;">
+    <li>24 hrs high-speed internet facility.</li> 
+    <li>Indoor Sports facilities.</li> 
+    <li>Badminton Court.</li> 
+    <li> Common Room Facility.</li> 
+    <li>Newspaper and Magazine in the common area.</li> 
+    <li>Laundry Facility.</li> 
+    <li>Equipped with basic furniture like cot, study table, and an almirah for storage.</li> 
+    <li>CCTV surveillance and 24 hrs security guard</li> 
+    <li> Bank, Post Office, Utility Store, Eateries, Dining Hall and Salon in close vicinity..</li> 
+</ul>    
+  <h2>Below are the information about hostels present in campus :</h2>
+<table>
+  <tr>
+    <th>Hostel id</th>
+    <th>Hostel name</th>
+    <th>Warden</th>
+    <th>Hostel capacity</th>
+  </tr>
+  <tr>
+    <td>4001</td>
+    <td>Devi ahiliya</td>
+    <td>keerthi bhatt</td>
+    <td>500</td>
+  </tr>
+  <tr>
+    <td>4002</td>
+    <td>A.P.J</td>
+    <td>sai ram</td>
+    <td>580</td>
+  </tr>
+  <tr>
+    <td>4003</td>
+    <td>C.V.Raman</td>
+    <td>harsha seth</td>
+    <td>620</td>
+  </tr>
+  
+  
+</table>
+<br><br>
+<div class="container" style="width:85%;height: 10px; ">
+  <div class="row">
+      <div class="col-md-4 col-sm-6">
+          <div class="box">
+              <img src="http://hostel.iiti.ac.in/images/hostel/apjkalam.jpg" style="height: 500px">
+              <div class="box-content">
+                  <h3 class="title">CVR</h3>
+                
+              </div>
+            <p class="icon" style="color: #DBE2EF;">
+              The hostel alloted to boys names as C.V.R on behalf of scientist c.v raman.It is one of the hostel present in the campus.It is generally allocated to the second year students present in the campus.
+            </p>
+          </div>
+      </div>
+      </div>
+  </div>
+</div>
+
+<div class="container" style="width:85%;height: 10px; margin:550px 75px">
+  <div class="row">
+      <div class="col-md-4 col-sm-6">
+          <div class="box">
+              <img src="http://hostel.iiti.ac.in/images/hostel/hostel1.jpg" style="height: 500px">
+              <div class="box-content">
+                  <h3 class="title">APJ</h3>
+                
+              </div>
+            <p class="icon" style="color: #DBE2EF;">
+              The hostel alloted to boys names as apj on behalf of abdul kalam.It is one of the hostel in the campus.The hostel is accomodated by first and 3rd year styudents in the college.
+            </p>
+          </div>
+      </div>
+      </div>
+  </div>
+</div>
+
+<div class="container" style="width:85%;height: 10px; margin:550px 75px">
+  <div class="row">
+      <div class="col-md-4 col-sm-6">
+          <div class="box">
+              <img src="http://hostel.iiti.ac.in/images/hostel/hjb_new.jpg" style="height: 500px">
+              <div class="box-content">
+                  <h3 class="title">DEVI AHILIYA</h3>
+                
+              </div>
+            <p class="icon" style="color: #DBE2EF;">
+              hostel was being alloted to the girl students and names by the name of dynamic lady Devi ahiliya.This hostel is only specially allocated to the girls students in the college.In which all graduation students and post graduation girl students were residing.  
+            </p>
+          </div>
+      </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- <div class="card">
+  <img src="http://hostel.iiti.ac.in/images/hostel/apjkalam.jpg" alt="Avatar" style="width:100%;height:350px;">
+  <div class="container">
+    <h2><b>CVR</b></h2> 
+    <p style="font-size :25px ;">The hostel alloted to boys names as apj on behalf of scientist c.v raman </p>
+
+    
+  </div>
+</div>  
+
+<div class="card">
+  <img src="http://hostel.iiti.ac.in/images/hostel/hostel1.jpg" alt="Avatar" style="width:100%;height:350px">
+  <div class="container">
+    <h2><b>APJ</b></h2> 
+    <p style="font-size :25px ;">The hostel alloted to boys names as apj on behalf of abdul kalam ....</p> 
+  </div>
+</div> 
+
+<div class="card">
+  <img src="http://hostel.iiti.ac.in/images/hostel/hjb_new.jpg" alt="Avatar" style="width:100%;height:350px;">
+  <div class="container">
+    <h2><b>DEVI AHILIYA</b></h2> 
+    <p style="font-size :25px ;">hostel was being alloted to the girl students and names by the name of dynamic lady Devi ahiliya...</p> 
+  </div>
+</div> -->
+
+
+<!-- <div class="row">
+  <img class="image" style="z-index:-1;opacity:0.2" src="https://static.toiimg.com/thumb/msid-69696358,width-400,resizemode-4/69696358.jpg" alt=""> -->
+ 
+<!-- 
+  <div class="card1" style="width: 18rem;">
+    <img style="width: 287px;"  src="http://hostel.iiti.ac.in/images/hostel/hjb_new.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h3 class="card-title">Devi ahiliya</h3>
+      <p class="card-text"></p>
+      <a href="http://hostel.iiti.ac.in/devi_ahilya" class="btn btn-primary">Read more</a>hostel was being alloted to the girl students and names by the name of dynamic lady Devi ahiliya...
+
+    </div>
+  </div>
+
+  <div class="card1" style="width: 18rem;">
+    <img style="width: 287px;"src="http://hostel.iiti.ac.in/images/hostel/hostel1.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h3  class="card-title">APJ hostel</h3>
+      <p class="card-text">   The hostel alloted to boys names as apj on behalf of abdul kalam ....</p>
+      <a href="http://hostel.iiti.ac.in/apj_hall" class="btn btn-primary">Read more</a>
+    </div>
+  </div>
+
+  <div class="card1" style="width: 18rem;">
+    <img style="width: 287px;"src="http://hostel.iiti.ac.in/images/hostel/apjkalam.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h3 class="card-title">CVR hostel</h3>
+      <p class="card-text"> The hostel alloted to boys names as apj on behalf of scientist c.v raman ....</p>
+      <a href="http://hostel.iiti.ac.in/cv_raman_hall" class="btn btn-primary">Read more</a>
+
+    </div>
+  </div>
+
+  
+
+  
+
+  
+</div> --> -->
+
+  
+  <!-- The four columns -->
+  
+  
+  <div class="container">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <img id="expandedImg" style="width:100%">
+    <div id="imgtext"></div>
+  </div>
+  
+  <script>
+  function myFunction(imgs) {
+    var expandImg = document.getElementById("expandedImg");
+    var imgText = document.getElementById("imgtext");
+    expandImg.src = imgs.src;
+    imgText.innerHTML = imgs.alt;
+    expandImg.parentElement.style.display = "block";
+  }
+  </script>
+ 
+</body>
+</html>

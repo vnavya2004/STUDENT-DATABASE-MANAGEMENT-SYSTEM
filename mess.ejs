@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=p, initial-scale=1.0">
+  <title>DINING FACILTIES</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <style>
+    .btn {
+      background-color: dodgerblue;
+      color: white;
+      padding: 15px 20px;
+      border: none;
+      cursor: pointer;
+      width: 10%;
+      opacity: 0.9;
+    }
+
+    .btn:hover {
+      opacity: 1;
+    }
+
+    body {
+      font-family: Verdana, sans-serif;
+      margin: 0;
+      background-image: linear-gradient(#DBE2EF, #3F72AF);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .row>.column {
+      padding: 0 8px;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .column {
+      float: left;
+      width: 25%;
+    }
+
+    /* The Modal (background) */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+    }
+
+    /* Modal Content */
+    .modal-content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      padding: 0;
+      width: 90%;
+      max-width: 1200px;
+    }
+
+    /* The Close Button */
+    .close {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    .cursor {
+      cursor: pointer;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    img {
+      margin-bottom: -4px;
+    }
+
+    .caption-container {
+      text-align: center;
+      background-color: black;
+      padding: 2px 16px;
+      color: white;
+    }
+
+    .demo {
+      opacity: 0.6;
+    }
+
+    .active,
+    .demo:hover {
+      opacity: 1;
+    }
+
+    img.hover-shadow {
+      transition: 0.3s;
+    }
+
+    .hover-shadow:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .ajay {
+      border-radius: 20px;
+      border-style: solid;
+      border-color: black;
+      margin: 0px 0px 20px 0px;
+
+    }
+
+    .img2 {
+      display: inline-block;
+
+      width: 25%;
+      margin: 0px 10px;
+    }
+
+    .p2 {
+      display: inline-block;
+      width: 65%;
+      margin: 0px 10px;
+    }
+
+    .kanaka {
+      border-radius: 20px;
+      border-style: solid;
+      border-color: black;
+      margin: 0px 0px 20px 0px;
+
+    }
+
+    .img1 {
+      display: inline-block;
+
+      width: 25%;
+      margin: 0px 10px;
+    }
+
+    .p1 {
+      display: inline-block;
+      width: 65%;
+      margin: 0px 10px;
+    }
+
+    .button {
+      padding: 15px 25px;
+      font-size: 20px;
+      width: 150px;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      color: #fff;
+      background-color: #2949e8;
+      border: none;
+      border-radius: 20px;
+      text-decoration: none;
+
+      margin: 0px 900px;
+      position: relative;
+      right: 0px;
+      top: 0px;
+
+    }
+
+    .button:hover {
+      background-color: #2d8080
+    }
+
+    .button:active {
+      background-color: #2d8080;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    } 
+    
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+  </style>
+</head>
+
+<body>
+  <nav class="navbar fixed-top "
+  style="background-color:#112D4E;color: white; height:55px;text-align: center;font-size: 32px;padding: 0px 0px 0px 500px;">
+  <div class="container-fluid">
+    DINING HALLS
+  </div>
+</nav>
+  <!-- <h1 style="text-align: center;">DINING HALLS</h1> -->
+  <p style="text-align:center ;font-size: 20px;margin: 75PX 30PX 30PX 30PX;">The institute has a Central Dining Facility (Carbon Building) wherein
+    around 1000 people
+    can have their meals at one point. Students of different hostels can have meals together in
+    dining hall. Separate sections have been developed for dining of students, institute staff or
+    any guests. The dining hall comprises of 02 big sized and 04 small sized kitchens, 02common
+    washrooms and lift facility as well. An Executive Dining Hall has also been equipped in
+    Central Dining Facility for Hospitality & Dining services to the institute’s invited/VIP guests.
+    Students are served healthy and nutritious meals wherein the student body decides the
+    menu on a weekly basis and a dining committee monitors the overall functions. Quality of
+    food is maintained by taking frequent feedbacks and immediate addressing of complaints.
+    The payments are made to the caterer on the monthly meal plan basis. The payment is done
+    cashless only through EDC Machine & UPI (Google Pay, Phone Pay, Paytm etc). The entire
+    Central Dining facility Follows COVID appropriate behavior. Other than regular dining
+    services, the carbon building also houses several kiosks(e.g. Bakeology, Noor’s Kitchen,
+    Aladeen’s Café, Daily Needs, Amul Shop, Laundry etc.) that serve delicacies and other
+    services round the clock. The functioning of central dining section is supervised by a team of
+    dining staff, student body, student volunteers, and administered by a dining committee.</p>
+    <h2>Below are the information about caterers in college</h2>
+    <br>
+    
+    <br><br>
+  <div class="card mb-3" style="max-width: 100%;display: inline-block;background-color: #112D4E;color: white;">
+    <div class="row no-gutters" style="height:300px ;">
+      <div class="col-md-4">
+        <img src="https://qph.cf2.quoracdn.net/main-qimg-7af09bbf7a00e157b767b03aa6f47e4b"
+          width="43%" height="300px" class="card-img" alt="...">
+      </div>
+      <div class="col-md-8" style="display: inline-block">
+        <div class="card-body" > 
+          <h3 class="card-title">Ajay caterers</h3>
+          <p class="card-text"> Apart from the canteen College has specious Mess facility in the campus. In the mess 120 students can take their lunch at a time. The mess is provided with modern furniture and electrical automatic cooking and storing facilities, which provides hot lunch, snacks and beverages to the students. Apart from lunch, dinner and morning breakfast, evening breakfast is also provided to the students.
+           </p>
+            <p style="text-align:center;font-style: oblique;">To know about the mess click here..</p>
+            <form action="/action_page.php" >   
+                <a  style="text-align:right; margin:420px;" href="/login1/ajay">Clickhere</a>   </form> 
+          <!-- <div style=" text-align:right">
+            <small id="emailHelp" class="form-text text-muted">Starting Rate/Night</small>
+            <a style="color:#C98474; " class="btn btn-" href="deluxeroom.html" role="button">
+              <h4>BOOK NOW</h4>
+            </a>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+<br><br>
+  <div class="card mb-3" style="max-width: 100%;display: inline-block; background-color: #112D4E;color: white;">
+    <div class="row no-gutters" style="height:300px ;">
+      <div class="col-md-4">
+        <img src="http://hostel.iiti.ac.in/images/hostel/dining_night.jpg"
+          width="100%" height="300px" class="card-img" alt="...">
+      </div>
+      <div class="col-md-8" style="display: inline-block">
+        <div class="card-body" \>
+          <h3 class="card-title">Kanaka caterers</h3>
+          <p class="card-text">The hostel mess has a separate dining hall and a well-equipped kitchen catering to more than 3800 students. Mess serves breakfast, lunch, evening tea and dinner every day and the weekly menu is available with the mess in-charge. The food served is of high quality and meets the nutritional quality standards. Particular focus is laid to provide a well-balanced, nutritious diet with varying food tastes to all the students. </p>
+            <p style="text-align:center;font-style: oblique; ">To know about the mess click here..</p>
+            <form action="/action_page.php" >   
+                <a href="/login1/kanaka" style="text-align:right; margin:420px;">Clickhere</a>   </form> 
+          <!-- <div style=" text-align:right">
+            <small id="emailHelp" class="form-text text-muted">Starting Rate/Night</small>
+            <a style="color:#C98474; " class="btn btn-" href="deluxeroom.html" role="button">
+              <h4>BOOK NOW</h4>
+            </a>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+<br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <div class="ajay">
+    <h2 style="text-align:center;background-color: transparent;">Ajay caterers</h2>
+
+    <div class="img1">
+      <img id="myImg" src="http://hostel.iiti.ac.in/images/hostel/dining_night.jpg" alt="Snow"
+        style="width:200%;max-width:350px;height:300px;">
+    </div>
+    <div class="p1">
+      <p style="text-align: center;"> An alumni association is an association of graduates or, more broadly, of former
+        students (alumni).
+
+        These associations often organize social events, publish newsletters or magazines, and raise funds for the
+        organization. Many provide a variety of benefits and services that help alumni maintain connections to their
+        educational institution and fellow graduates. Most associations do not require its members to be an alumnus of a
+        university to enjoy membership and privileges.
+
+        Additionally, such groups often support new alumni, and provide a forum to form new friendships and business
+        relationships with people of similar background.
+
+        Vision of Alumni:
+
+        To engage the global community to support and advance the college’s excellence.
+
+        Mission of Alumni
+
+        The Alumni Association fosters a lifelong spirit of belonging and pride by connecting alumni, students, and
+        friends to the college of Education and each other. The Alumni Association advocates for the college and its
+        alumni with a credible, independent and collaborative voice.
+        <br>
+      <p style="text-align:right;font-style: oblique;">To know about the memebers of the club click here..</p>
+      <form action="/action_page.php">
+        <a href="/ajay" class="button">Click_here</a>
+      </form>
+
+      </p>
+    </div>
+  </div>
+
+
+  <div class="kanaka">
+    <h2 style="text-align:center">Kanaka caterers</h2>
+
+    <div class="img2">
+
+      <img id="myImg" src="http://hostel.iiti.ac.in/images/hostel/dining_night.jpg" alt="Snow"
+        style="width:100%;max-width:300px">
+    </div>
+    <div class="p2">
+      <p>
+        The start of something new. The programming club has been aiming for this since years, trying to build
+        communities. This is a small step towards the milestone. We have created a slack workspace with a dedicated
+        channel for each domain of development. These are more like interest groups, a place for people who share common
+        interests to discuss and share knowledge. A place where everyone can be a mentor or a mentee and help each out
+        and rise to glory!
+      <ul>
+        Perks of being in the community? Well, you will be the first to be informed about all the upcoming hackathon and
+        Dev meet-ups(yes, we are planning that too!). Also, all the projects that the programming club gets from
+        faculties, and other things that we plan to do. Will first be put up on it
+        Aims and objectives
+        <li> To develop a better coding culture.</li>
+        <li> To develop a better coding culture.</li>
+        <li> Organise coding competitions and hackathons.</li>
+        <li> Encourage students to participate in various coding competitions happening all around.</li>
+
+      </ul>
+      <p style="text-align:right;font-style: oblique;">To know about the memebers of the club click here..</p>
+      <form action="/action_page.php">
+        <a href="/kanaka" class="button">Click_here</a>
+      </form>
+
+
+
+
+      </p>
+    </div>
+  </div> -->
+
+
+
+
+  <script>
+    function openModal() {
+      document.getElementById("myModal").style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
+  </script>
+
+
+</body>
+
+</html>

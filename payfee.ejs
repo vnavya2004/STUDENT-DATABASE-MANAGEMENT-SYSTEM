@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Add icon library -->
+  <title>Add Student</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      color: #f2f2f2;
+      /* background-image: url(https://images.unsplash.com/photo-1543227013-d4bb04c3eec8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGJsYWNrJTIwYW5kJTIwYmx1ZSUyMGJhY2tncm91bmR8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60); */
+      background-image: linear-gradient(#DBE2EF,#3F72AF); 
+      
+      overflow-y: hidden;
+   
+    
+    }
+
+    .background {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 50px;
+      padding-bottom: 50px;
+      /* background-image: url(https://images.unsplash.com/photo-1543227013-d4bb04c3eec8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGJsYWNrJTIwYW5kJTIwYmx1ZSUyMGJhY2tncm91bmR8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60); */
+
+      background-size: 1500px;
+      width: 1500px;
+      height: 300px;
+      border: 1px solid;
+    }
+
+    .adm {
+      background-color: rgb(116, 165, 250);
+      height:100px;
+      width:400px;
+    }
+
+    .container {
+      background: black;
+      width: 400px;
+      height: 350px;
+      padding-bottom: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: auto;
+      padding: 70px 50px 20px 50px;
+    }
+
+
+    .fl {
+      float: left;
+      width: 110px;
+      line-height: 35px;
+    }
+
+    .fontLabel {
+      color: white;
+    }
+
+    .fr {
+      float: right;
+    }
+
+    .clr {
+      clear: both;
+    }
+
+    .box {
+      width: 320px;
+      height: 30px;
+      margin-top: 20px;
+      font-family: verdana;
+      font-size: 12px;
+    }
+
+    .textBox {
+      height: 35px;
+      width: 150px;
+      border: none;
+      padding-left: 20px;
+
+    }
+
+    .new {
+      float: left;
+    }
+
+    .iconBox {
+      height: 35px;
+      width: 35px;
+      line-height: 38px;
+      text-align: center;
+      background: rgb(116, 165, 250);
+    }
+
+    .radio {
+      color: white;
+      background: black;
+      line-height: 38px;
+    }
+
+    .terms {
+      line-height: 35px;
+      text-align: center;
+      background: black;
+      color: rgb(238, 238, 238);
+    }
+
+    .submit {
+      float: right;
+      border: none;
+      color: white;
+      width: 110px;
+      height: 35px;
+      background: rgb(116, 165, 250);
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 0px;
+      margin:0px; 
+      overflow-x: hidden;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .form {
+      background-color: black;
+      border-radius: 5px;
+    }
+    .submit:hover{
+    background-color: black;
+    font-size: 18px;
+  }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="background">
+    <div class="container">
+      <form action="/login1/cpay" method="post" autocomplete="on">
+        <div class="col-md-6 mx-auto mt-5">
+          <h1 style="color: white; text-align: center;">fee payment</h1>
+        </div>
+
+        <div class="form">
+          <div class="box" >
+            <label for="firstName" class="fl fontLabel" style="font-size:15px"> User id: </label>
+
+            <div class="new iconBox">
+              <i class="fa fa-user" aria-hidden="true"></i>
+            </div>
+            <div class="fr">
+              <input type="text" name="userid" placeholder="userid" class="textBox" autofocus="on" required>
+            </div>
+            <div class="clr"></div>
+          </div>
+          <div class="box">
+            <label for="firstName" class="fl fontLabel" style="font-size:15px"> amount paid: </label>
+
+            <div class="new iconBox">
+              <i class="fa fa-user" aria-hidden="true"></i>
+            </div>
+            <div class="fr">
+              <input type="text" name="feeamount" placeholder="feeamount" class="textBox" autofocus="on" required>
+            </div>
+            <div class="clr"></div>
+          </div>
+
+          
+
+
+
+          <!---Phone No.------>
+          
+          <!---Phone No.---->
+
+
+          <!---Email ID---->
+          
+          <!--Email ID----->
+
+
+          <!---Password------>
+          
+
+          <!---Password---->
+         
+
+         
+
+
+
+          <!--Terms and Conditions------>
+          <div class="box terms">
+            <input type="checkbox" name="Terms" required > &nbsp; I accept the terms and conditions
+          </div>
+          <!--Terms and Conditions------>
+
+
+
+          <!---Submit Button------>
+          <div class="box" style="background: black">
+            <input type="Submit" name="pay" class="submit" value="SUBMIT">
+          </div>
+          <!---Submit Button----->
+      </form>
+    </div>
+  </div>
+  <!--First name-->
+
+  </div>
+
+
+
+</body>
+
+</html>

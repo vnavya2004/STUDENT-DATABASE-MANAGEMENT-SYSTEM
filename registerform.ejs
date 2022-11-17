@@ -1,0 +1,125 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register form</title>
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+         *{
+        font-family: 'Poppins', sans-serif;
+        margin:0; padding:0px;
+        box-sizing: border-box;
+        outline: none; border:none;
+        text-decoration: none;  
+       
+
+     }
+     .form-container{
+        min-height: 100vh; 
+       
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding:50px;
+        padding-bottom: 50px;
+        /* background-image: url(https://images.unsplash.com/photo-1543227013-d4bb04c3eec8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGJsYWNrJTIwYW5kJTIwYmx1ZSUyMGJhY2tncm91bmR8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60); */
+        background-image: linear-gradient(#DBE2EF,#3F72AF); 
+  background-size: 1500px;
+  width: 1600px;
+  height: 300px;
+  border: 1px solid;
+  
+     }
+     
+     .form-container form{
+        padding:40px;
+        border-radius: 15px;
+        /* box-shadow: 0 5px 10px rgba(0,0,0,.1); */
+        background: black;
+        text-align: center;
+        width: 500px;
+     }
+     
+     .form-container form h3{
+        font-size: 30px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        color:white;
+     }
+     
+     .form-container form input,
+     .form-container form select{
+        width: 100%;
+        padding:10px 15px;
+        font-size: 17px;
+        margin:8px 0;
+        background:  rgb(238, 238, 238);
+        border-radius: 5px;
+     }
+     
+     .form-container form select option{
+        background: #fff;
+     }
+     
+     .form-container form .form-btn{
+        background: rgb(103, 175, 231);
+        color:black;
+        text-transform: capitalize;
+        font-size: 20px;
+        cursor: pointer; 
+        border-color: black;
+     }
+     
+     .form-container form .form-btn:hover{
+        background:  black;
+        color:white;
+     }
+     
+     .form-container form p{
+        margin-top: 10px;
+        font-size: 20px;
+        color:black;
+     }
+     
+     .form-container form p a{
+        color:rgb(103, 175, 231);
+     }
+    
+     .form-container form p a:hover{
+        text-decoration: underline;
+     }
+     
+     .form-container form .error-msg{
+        margin:10px 0;
+        display: block;
+        background: black;
+        color:#fff;
+        border-radius: 5px;
+        font-size: 20px;
+        padding:10px;
+     } 
+     </style>
+</head>
+<body>
+    <div class="form-container">
+        <form action="/login1/adduser"  method="post">
+            <h3>register now</h3>
+            <input type="username" name="name" required placeholder="name">
+            <input type="@email.com" name="email" required placeholder="email@iiti.ac.in">
+            <input type="password" name="password" required placeholder="password">
+            <input type="usertype" name="usertype" required placeholder="user/admin">
+            
+            <input type="submit" name="adduser" value="submit" class="form-btn"> 
+            <p style="color:white;">already have an account? <a href="/login1/logout">login now</a></p>
+            
+
+        </form>
+        
+    </div>
+    <!-- <?php
+    echo "first php program";
+    ?> -->
+</body>
+</html>
